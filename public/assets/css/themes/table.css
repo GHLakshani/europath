@@ -1,0 +1,28 @@
+/* Add these styles to handle long text */
+    #dt-basic-example td {
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Add tooltip for truncated text */
+    #dt-basic-example td.text-overflow {
+        position: relative;
+    }
+
+    #dt-basic-example td.text-overflow:hover::after {
+        content: attr(data-content);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 1000;
+        background-color: #f9f9f9;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        white-space: normal;
+        max-width: 300px;
+        word-wrap: break-word;
+    }
+
