@@ -1,5 +1,5 @@
  <ol class="breadcrumb page-breadcrumb">
-     <li class="breadcrumb-item"><a href="javascript:void(0);">Pictorial Stock</a></li>
+     <li class="breadcrumb-item"><a href="javascript:void(0);">Europath</a></li>
      <li class="breadcrumb-item">{{ $item1 }}</li>
      @if(isset($item2))
      <li class="breadcrumb-item active">{{ $item2 }}</li>

@@ -135,7 +135,7 @@
 
                 if(categoryId) {
                     $.ajax({
-                        url: '{{ url("mg-cms/upload-image/subcategories") }}/' + categoryId,
+                        url: '{{ url("hanara-cms/upload-image/subcategories") }}/' + categoryId,
                         type: 'GET',
                         success: function(data) {
                             subcategorySelect.empty();

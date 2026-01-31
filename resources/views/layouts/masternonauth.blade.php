@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        @yield('title') - Pictorial Stock
+        @yield('title') - Europath
     </title>
     <meta name="description" content="Login">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

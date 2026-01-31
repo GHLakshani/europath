@@ -3,7 +3,7 @@
     <div class="page-logo d-flex justify-content-center">
         {{-- <a href="#" class="page-logo-link press-scale-down d-flex align-items-center justify-content-center position-relative" data-toggle="modal" data-target="#modal-shortcut"> --}}
             <img src="{{ url('public/assets/img/logo.png') }}" alt="SmartAdmin Laravel" aria-roledescription="logo" style="width: 95px; height: auto !important;">
-            {{-- <span class="mr-1 page-logo-text">Pictorial Stock</span>
+            {{-- <span class="mr-1 page-logo-text">Europath</span>
             <i class="ml-1 fal fa-angle-down d-inline-block fs-lg color-primary-300"></i> --}}
         {{-- </a> --}}
     </div>

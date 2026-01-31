@@ -17,6 +17,14 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 
+use App\Http\Controllers\Admin\CountryController;
+use App\Http\Controllers\Admin\AgentController;
+use App\Http\Controllers\Admin\JobController;
+use App\Http\Controllers\Admin\SubDealerController;
+use App\Http\Controllers\Admin\DocumentTypeController;
+
+use App\Http\Controllers\Admin\CandidateController;
+
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
@@ -68,7 +76,7 @@ Route::middleware('auth')->group(function () {
 
 Route::group(['middleware' => ['auth']], function () {
 
-    Route::prefix('mg-cms')->group(function () {
+    Route::prefix('hanara-cms')->group(function () {
 
         Route::get('dashboard', function () {
             return view('dashboard');
@@ -93,133 +101,98 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::post('profile', [ProfileController::class, 'update'])->name('profile.store');
 
+        // ********country***********
         Route::group([
-            'prefix' => 'main-slider',
-            'as' => 'main-slider.'
+            'prefix' => 'country',
+            'as' => 'country.'
         ], function () {
-            Route::get('/', [MainSliderController::class, 'index'])->name('index');
-            Route::get('/create', [MainSliderController::class, 'create'])->name('create');
-            Route::post('/store', [MainSliderController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [MainSliderController::class, 'edit'])->name('show');
-            Route::get('/get-main-slider', [MainSliderController::class, 'getAjaxMainSliderData'])->name('get-main-slider');
-            Route::put('/update/{id}', [MainSliderController::class, 'update'])->name('update');
-            Route::put('/change-status/{id}', [MainSliderController::class, 'activation'])->name('change-status');
-            Route::delete('/delete/{id}', [MainSliderController::class, 'destroy'])->name('delete');
+            Route::get('/', [CountryController::class, 'index'])->name('index');
+            Route::get('/create', [CountryController::class, 'create'])->name('create');
+            Route::post('/store', [CountryController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [CountryController::class, 'show'])->name('show');
+            Route::get('/get-country', [CountryController::class, 'getAjaxCountryData'])->name('get-country');
+            Route::put('/update/{id}', [CountryController::class, 'update'])->name('update');
+            Route::put('/change-status/{id}', [CountryController::class, 'activation'])->name('change-status');
+            Route::put('/change-featured-status/{id}', [CountryController::class, 'featured'])->name('change-featured-status');
+            Route::delete('/delete/{id}', [CountryController::class, 'destroy'])->name('delete');
         });
 
+        // ********job***********
         Route::group([
-            'prefix' => 'photographer',
-            'as' => 'photographer.'
+            'prefix' => 'job',
+            'as' => 'job.'
         ], function () {
-            Route::get('/', [PhotographerController::class, 'index'])->name('index');
-            Route::get('/create', [PhotographerController::class, 'create'])->name('create');
-            Route::post('/store', [PhotographerController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [PhotographerController::class, 'edit'])->name('show');
-            Route::get('/get-photographer', [PhotographerController::class, 'getAjaxPhotographerData'])->name('get-photographer');
-            Route::put('/update/{id}', [PhotographerController::class, 'update'])->name('update');
-            Route::put('/change-status/{id}', [PhotographerController::class, 'activation'])->name('change-status');
-            Route::delete('/delete/{id}', [PhotographerController::class, 'destroy'])->name('delete');
+            Route::get('/', [JobController::class, 'index'])->name('index');
+            Route::get('/create', [JobController::class, 'create'])->name('create');
+            Route::post('/store', [JobController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [JobController::class, 'show'])->name('show');
+            Route::get('/get-job', [JobController::class, 'getAjaxJobData'])->name('get-job');
+            Route::put('/update/{id}', [JobController::class, 'update'])->name('update');
+            Route::put('/change-status/{id}', [JobController::class, 'activation'])->name('change-status');
+            Route::delete('/delete/{id}', [JobController::class, 'destroy'])->name('delete');
         });
 
 
-        // ********Category***********
+        // ********agent***********
         Route::group([
-            'prefix' => 'category',
-            'as' => 'category.'
+            'prefix' => 'agent',
+            'as' => 'agent.'
         ], function () {
-            Route::get('/', [CategoryController::class, 'index'])->name('index');
-            Route::get('/create', [CategoryController::class, 'create'])->name('create');
-            Route::post('/store', [CategoryController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [CategoryController::class, 'show'])->name('show');
-            Route::get('/get-category', [CategoryController::class, 'getAjaxCategoryData'])->name('get-category');
-            Route::put('/update/{id}', [CategoryController::class, 'update'])->name('update');
-            Route::put('/change-status/{id}', [CategoryController::class, 'activation'])->name('change-status');
-            Route::put('/change-featured-status/{id}', [CategoryController::class, 'featured'])->name('change-featured-status');
-            Route::delete('/delete/{id}', [CategoryController::class, 'destroy'])->name('delete');
+            Route::get('/', [AgentController::class, 'index'])->name('index');
+            Route::get('/create', [AgentController::class, 'create'])->name('create');
+            Route::post('/store', [AgentController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [AgentController::class, 'show'])->name('show');
+            Route::get('/get-agent', [AgentController::class, 'getAjaxAgentData'])->name('get-agent');
+            Route::put('/update/{id}', [AgentController::class, 'update'])->name('update');
+            Route::put('/change-status/{id}', [AgentController::class, 'activation'])->name('change-status');
+            Route::delete('/delete/{id}', [AgentController::class, 'destroy'])->name('delete');
         });
 
-        // ********sub Category***********
+        // ********sub dealer***********
         Route::group([
-            'prefix' => 'sub-category',
-            'as' => 'sub-category.'
+            'prefix' => 'sub-dealer',
+            'as' => 'sub-dealer.'
         ], function () {
-            Route::get('/', [SubCategoryController::class, 'index'])->name('index');
-            Route::get('/create', [SubCategoryController::class, 'create'])->name('create');
-            Route::post('/store', [SubCategoryController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [SubCategoryController::class, 'show'])->name('show');
-            Route::get('/get-sub-category', [SubCategoryController::class, 'getAjaxSubCategoryData'])->name('get-sub-category');
-            Route::put('/update/{id}', [SubCategoryController::class, 'update'])->name('update');
-            Route::put('/change-status/{id}', [SubCategoryController::class, 'activation'])->name('change-status');
-            Route::delete('/delete/{id}', [SubCategoryController::class, 'destroy'])->name('delete');
+            Route::get('/', [SubDealerController::class, 'index'])->name('index');
+            Route::get('/create', [SubDealerController::class, 'create'])->name('create');
+            Route::post('/store', [SubDealerController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [SubDealerController::class, 'show'])->name('show');
+            Route::get('/get-sub-dealer', [SubDealerController::class, 'getAjaxSubDealerData'])->name('get-sub-dealer');
+            Route::put('/update/{id}', [SubDealerController::class, 'update'])->name('update');
+            Route::put('/change-status/{id}', [SubDealerController::class, 'activation'])->name('change-status');
+            Route::delete('/delete/{id}', [SubDealerController::class, 'destroy'])->name('delete');
         });
 
-        // ******** uplad images***********
+        // ********document type***********
         Route::group([
-            'prefix' => 'upload-image',
-            'as' => 'upload-image.'
+            'prefix' => 'document-type',
+            'as' => 'document-type.'
         ], function () {
-            Route::get('/', [UploadImageController::class, 'index'])->name('index');
-            Route::get('/create', [UploadImageController::class, 'create'])->name('create');
-            Route::post('/store', [UploadImageController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [UploadImageController::class, 'show'])->name('show');
-            Route::get('/get-upload-image', [UploadImageController::class, 'getAjaxUploadImageData'])->name('get-upload-image');
-            Route::put('/update/{id}', [UploadImageController::class, 'update'])->name('update');
-            Route::put('/change-status/{id}', [UploadImageController::class, 'activation'])->name('change-status');
-            Route::delete('/delete/{id}', [UploadImageController::class, 'destroy'])->name('delete');
-            Route::get('/subcategories/{category}', [UploadImageController::class, 'getByCategory'])->name('upload-image.subcategories');
-
+            Route::get('/', [DocumentTypeController::class, 'index'])->name('index');
+            Route::get('/create', [DocumentTypeController::class, 'create'])->name('create');
+            Route::post('/store', [DocumentTypeController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [DocumentTypeController::class, 'show'])->name('show');
+            Route::get('/get-document-type', [DocumentTypeController::class, 'getAjaxDocumentTypeData'])->name('get-document-type');
+            Route::put('/update/{id}', [DocumentTypeController::class, 'update'])->name('update');
+            Route::put('/change-status/{id}', [DocumentTypeController::class, 'activation'])->name('change-status');
+            Route::delete('/delete/{id}', [DocumentTypeController::class, 'destroy'])->name('delete');
         });
 
-        // ********Meta Tags***********
+        // ********candidate***********
         Route::group([
-            'prefix' => 'meta-tag',
-            'as' => 'meta-tag.'
+            'prefix' => 'candidate',
+            'as' => 'candidate.'
         ], function () {
-            Route::get('/', [MetaTagController::class, 'index'])->name('index');
-            Route::get('/create', [MetaTagController::class, 'create'])->name('create');
-            Route::post('/store', [MetaTagController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [MetaTagController::class, 'show'])->name('show');
-            Route::get('/get-meta-tag', [MetaTagController::class, 'getAjaxMetaTagData'])->name('get-meta-tag');
-            Route::put('/update/{id}', [MetaTagController::class, 'update'])->name('update');
-            Route::put('/change-status/{id}', [MetaTagController::class, 'activation'])->name('change-status');
-            Route::delete('/delete/{id}', [MetaTagController::class, 'destroy'])->name('delete');
+            Route::get('/', [CandidateController::class, 'index'])->name('index');
+            Route::get('/create', [CandidateController::class, 'create'])->name('create');
+            Route::post('/store', [CandidateController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [CandidateController::class, 'show'])->name('show');
+            Route::get('/get-candidate', [CandidateController::class, 'getAjaxCandidateData'])->name('get-candidate');
+            Route::put('/update/{id}', [CandidateController::class, 'update'])->name('update');
+            Route::put('/change-status/{id}', [CandidateController::class, 'activation'])->name('change-status');
+            Route::delete('/delete/{id}', [CandidateController::class, 'destroy'])->name('delete');
+            Route::get('/{encryptedId}/cv', [CandidateController::class, 'exportCv'])->name('cv');
+
         });
-
-        // ******** contact us *****
-        Route::prefix('contact_us')->group(function () {
-            Route::group([
-                'prefix' => 'contact-us',
-                'as' => 'contact-us.'
-            ], function () {
-                Route::get('/', [ContactUsController::class, 'index'])->name('index');
-                Route::post('/update/{id}', [ContactUsController::class, 'update'])->name('update');
-            });
-
-            Route::group([
-                'prefix' => 'contact-us-inquiry',
-                'as' => 'contact-us-inquiry.'
-            ], function () {
-                Route::get('/', [ContactUsInquiryController::class, 'index'])->name('index');
-                Route::get('/edit/{id}', [ContactUsInquiryController::class, 'show'])->name('show');
-                Route::get('/get-contact-us-inquiry', [ContactUsInquiryController::class, 'getAjaxContactInquiryData'])->name('get-contact-us-inquiry');
-            });
-        });
-
-        // ******** testimonial *****
-        Route::group([
-            'prefix' => 'testimonial',
-            'as' => 'testimonial.'
-        ], function () {
-            Route::get('/', [TestimonialController::class, 'index'])->name('index');
-            Route::get('/create', [TestimonialController::class, 'create'])->name('create');
-            Route::post('/store', [TestimonialController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [TestimonialController::class, 'show'])->name('show');
-            Route::get('/get-testimonial', [TestimonialController::class, 'getAjaxTestimonialData'])->name('get-testimonial');
-            Route::put('/update/{id}', [TestimonialController::class, 'update'])->name('update');
-            Route::put('/change-status/{id}', [TestimonialController::class, 'activation'])->name('change-status');
-            Route::delete('/delete/{id}', [TestimonialController::class, 'destroy'])->name('delete');
-        });
-
     });
 });
-

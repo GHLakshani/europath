@@ -17,6 +17,36 @@ class PermissionTableSeeder extends Seeder
         $permissions = [
             'dashboard',
 
+            'country-list',
+            'country-create',
+            'country-edit',
+            'country-delete',
+
+            'job-list',
+            'job-create',
+            'job-edit',
+            'job-delete',
+
+            'agent-list',
+            'agent-create',
+            'agent-edit',
+            'agent-delete',
+
+            'sub-dealer-list',
+            'sub-dealer-create',
+            'sub-dealer-edit',
+            'sub-dealer-delete',
+
+            'document-type-list',
+            'document-type-create',
+            'document-type-edit',
+            'document-type-delete',
+
+            'candidate-list',
+            'candidate-create',
+            'candidate-edit',
+            'candidate-delete',
+
             'role-list',
             'role-create',
             'role-edit',
@@ -29,6 +59,36 @@ class PermissionTableSeeder extends Seeder
         ];
         $dynamicID = [
             '1',
+
+            '3',
+            '3',
+            '3',
+            '3',
+
+            '4',
+            '4',
+            '4',
+            '4',
+
+            '5',
+            '5',
+            '5',
+            '5',
+
+            '6',
+            '6',
+            '6',
+            '6',
+
+            '7',
+            '7',
+            '7',
+            '7',
+
+            '20',
+            '20',
+            '20',
+            '20',
 
             '152',
             '152',

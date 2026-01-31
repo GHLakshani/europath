@@ -7,4 +7,4 @@
 <hr>
 
 <p>Best regards,<br>
-The Pictorialstock Team</p>
+The Europath Team</p>

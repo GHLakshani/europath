@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
-    <title>Pictorialstock</title>
+    <title>Europath</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Pictorialstock.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes. ">
+	<meta name="description" content="Europath.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes. ">
     <meta name="keywords" content="Pictorial, stock, pictures, office, wild, sri lanka">
     <meta name="author" content="MGee - The Creative Factory">
 
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-    <meta property="og:title" content="Pictorial Stock">
-    <meta property="og:description" content="Pictorialstock.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes. ">
+    <meta property="og:title" content="Europath">
+    <meta property="og:description" content="Europath.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes. ">
     <meta property="og:image" content="{{ asset('public/frontend/assets/images/og_image.jpg') }}">
-    <meta property="og:url" content="https://pictorialstock.com">
+    <meta property="og:url" content="https://Europath.com">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pictorial Stock">
-    <meta name="twitter:description" content="Pictorialstock.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes.">
+    <meta name="twitter:title" content="Europath">
+    <meta name="twitter:description" content="Europath.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes.">
     <meta name="twitter:image" content="{{ asset('public/frontend/assets/images/og_image.jpg') }}">
 
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url('public/assets/img/favicon/favicon.png') }}">

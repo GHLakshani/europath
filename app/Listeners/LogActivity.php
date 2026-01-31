@@ -27,7 +27,7 @@ class LogActivity
 
         Activity::create([
             'description' => class_basename(get_class($object)) . ' ' . ($object->id ?? 'unknown') . ' has been ' . $event->description,
-            'subject_id' => $object->id ?? null,
+            'subject_id' => $object->id ?? 0,
             'subject_type' => get_class($object),
             'user_id' => auth('web')->id() ?? null,
             'office_id' => auth('web')->id() ?? null,

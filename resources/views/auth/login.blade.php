@@ -37,7 +37,7 @@
                         <div class="col col-md-6 col-lg-7 py-3 d-md-block d-none" style="height: 100vh;">
                             <div class="login_left_bg"
                                 style="background-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%), url('./public/assets/img/backgrounds/left_bg.jpg'); height: 100%; border-radius: 7px;">
-                                <h1>CONTENT MANAGEMENT SYSTEM</h1>
+                                <h1>Europath Foreign Employment</h1>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 ml-auto d-flex justify-content-center flex-column"

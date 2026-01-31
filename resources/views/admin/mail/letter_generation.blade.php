@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pictorial Stock</title>
+    <title>Europath</title>
 
     <!--favicon-->
     <link rel="icon" href="{{ asset('public/assets/img/logo.png') }}" type="image/x-icon" />

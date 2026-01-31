@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-.login_left_bg{
+.login_left_bg {
     /* background-size: cover; */
     background-position: center;
     background-repeat: no-repeat;
@@ -15,43 +15,43 @@
 
 @keyframes shrink {
     0% {
-      background-size: 110% 110%;
+        background-size: 110% 110%;
     }
 
     100% {
-      background-size: 100% 100%;
+        background-size: 100% 100%;
     }
-  }
+}
 
-.login_logo{
-    height: 180px;
+.login_logo {
+    height: 110px;
     width: auto;
     margin-bottom: 2px;
 }
 
-.login_form{
-    padding: 10px 50px
+.login_form {
+    padding: 10px 50px;
 }
 
-h1{
+h1 {
     font-size: 38px;
     font-weight: 800;
     color: #ffffff;
 }
 
-h2{
+h2 {
     font-weight: 800;
     font-size: 22px;
 }
 
-h3{
+h3 {
     font-weight: 700;
     font-size: 16px;
 }
 
 .yellow_btn {
-    background-color: #F3C623;
-    border: 1px solid #F3C623 !important;
+    background-color: #f3c623;
+    border: 1px solid #f3c623 !important;
     color: #000000 !important;
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
@@ -64,23 +64,23 @@ h3{
     padding: 12px 30px !important;
     border-radius: 5px;
     /* height: 58px; */
-  }
+}
 
-  .yellow_btn:focus {
+.yellow_btn:focus {
     background-color: #858383;
-    border: 1px solid #F3C623 !important;
+    border: 1px solid #f3c623 !important;
     color: #ffffff !important;
-  }
+}
 
-  .yellow_btn:focus-visible {
+.yellow_btn:focus-visible {
     background-color: #858383;
-    border: 1px solid #F3C623 !important;
+    border: 1px solid #f3c623 !important;
     color: #ffffff !important;
-  }
+}
 
-  .yellow_btn:hover {
+.yellow_btn:hover {
     background-color: #858383;
-    border: 1px solid #F3C623 !important;
+    border: 1px solid #f3c623 !important;
     color: #ffffff !important;
     border-radius: 8px;
-  }
+}

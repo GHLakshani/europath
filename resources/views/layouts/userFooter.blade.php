@@ -7,8 +7,8 @@
 				<div class="row">
 					<div class="col-md-9 column">
 						<div class="widget">
-							<h4 class="widget-title">pictorialstock.com</h4>
-							<p>Pictorialstock.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes.</p>
+							<h4 class="widget-title">Europath.com</h4>
+							<p>Europath.com was created to fill a long-standing gap in the advertising industry, the need for authentic, high-quality images that truly reflect Sri Lankan life, culture, people, and landscapes.</p>
                             <p>For decades, advertisers and designers in Sri Lanka struggled to find visuals that matched the local context. Costly custom photoshoots were often the only solution, or else creatives had to alter foreign images, mainly from India, to suit local campaigns. While global royalty-free platforms offered convenience, they rarely provided the cultural authenticity we needed.</p>
 							<!--<ul>-->
 							<!--	<li><a href="freedownloads.html" title="">Free Downloads</a></li>-->
@@ -43,7 +43,7 @@
 		</div>
 	</footer>
 	<div class="bottom-footer">
-		<div class="container"><p>© {{ date('Y') }} pictorialstock, All rights reserved.</p></div>
+		<div class="container"><p>© {{ date('Y') }} Europath, All rights reserved.</p></div>
 	</div>
 
 

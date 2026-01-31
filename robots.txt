@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.pictorialstock.com/sitemap.xml
+Sitemap: https://www.Europath.com/sitemap.xml
